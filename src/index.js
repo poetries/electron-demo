@@ -33,6 +33,7 @@ const createWindow = () => {
 
   // 创建菜单
     require('./main/menu.js')
+    require('./main/ipcMain.js')
 };
 
 // This method will be called when Electron has finished
