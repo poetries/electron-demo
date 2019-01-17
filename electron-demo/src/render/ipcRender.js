@@ -3,7 +3,7 @@ let send = document.querySelector('#send');
 let sendFeedback = document.querySelector('#sendFeedback');
 let sendSync = document.querySelector('#sendSync');
 
-const { ipcRenderer } = require('electron');
+var { ipcRenderer } = require('electron');
 
 send.onclick = function () {
     // 触发主进程里面的方法
@@ -29,3 +29,4 @@ sendSync.onclick = function () {
 
    console.log('msg\n ', msg)
 }
+
