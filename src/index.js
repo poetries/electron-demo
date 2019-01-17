@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { app, BrowserWindow } from 'electron';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -29,6 +30,9 @@ const createWindow = () => {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
+  // 创建菜单
+    require('./main/menu.js')
 };
 
 // This method will be called when Electron has finished
