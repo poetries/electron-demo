@@ -1,5 +1,5 @@
 /* eslint-disable */
-let {Menu,shell,ipcMain,BrowserWindow} =require('electron');
+let {Menu,shell,ipcMain,BrowserWindow,app} =require('electron');
 
 let template = [
     {
@@ -38,13 +38,15 @@ let template = [
                 label: '打印',
                 accelerator: 'command+p', // 绑定快捷键
                 click: function(){
-                    BrowserWindow.getFocusedWindow().send('action', 'print')
+                    // 打印功能
+                    BrowserWindow.getFocusedWindow().webContents.print();
                 }
             },
             {
                 label: '退出',
                 accelerator: 'command+q', // 绑定快捷键
                 click: function(){
+                    // 提示用户保存未保存的文件
                     BrowserWindow.getFocusedWindow().send('action', 'exit')
                 }
             }

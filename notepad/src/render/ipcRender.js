@@ -47,7 +47,9 @@ ipcRenderer.on('action', (e, action)=>{
             saveCurrentDoc()
             break;
         case 'exit':
-
+            showSaveDialog() //同步方法
+            // 通知主进程退出  
+            ipcRenderer.send('exit-app')
             break;
     }
 })
