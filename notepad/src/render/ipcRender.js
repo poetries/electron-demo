@@ -39,7 +39,8 @@ ipcRenderer.on('action', (e, action)=>{
                 // 获取文件内容
                if(path){
                     let fileData = fs.readFileSync(path[0])
-                    textarea.innerHTML = fileData
+                    // textarea.innerHTML = fileData
+                    editor.setValue(fileData)
                }
             })
             break;
@@ -81,13 +82,14 @@ function saveCurrentDoc() {
          // console.log(data)
          if(dir){
             currentFile = dir;
-            fs.writeFileSync(currentFile, textarea.value)
+            fs.writeFileSync(currentFile, editor.getValue())
             isSaveFlag = true;
             document.title = currentFile //改变标题
         }
     }else{
         // 下次直接保存 不提示对话框
-        fs.writeFileSync(currentFile, textarea.value)
+        // 之前是这样获取textarea.value
+        fs.writeFileSync(currentFile, editor.getValue())
         isSaveFlag = true;
         document.title = currentFile //改变标题
     }

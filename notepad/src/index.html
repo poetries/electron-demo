@@ -7,6 +7,37 @@
   </head>
   <body>
     <textarea id="textarea"></textarea>
-    <script src="render/ipcRender.js"></script>
   </body>
+ 
+  <link rel=stylesheet href="static/codemirror/doc/docs.css">
+  <link rel="stylesheet" href="static/codemirror/lib/codemirror.css">
+   <script src="static/codemirror/lib/codemirror.js"></script>
+    <script src="static/codemirror/addon/selection/selection-pointer.js"></script>
+    <script src="static/codemirror/mode/xml/xml.js"></script>
+    <script src="static/codemirror/mode/javascript/javascript.js"></script>
+    <script src="static/codemirror/mode/css/css.js"></script>
+    <script src="static/codemirror/mode/vbscript/vbscript.js"></script>
+    <script src="static/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <style>
+        .CodeMirror{
+          height: 100%;
+        }
+      </style>
+    <script>
+        // Define an extended mixed-mode that understands vbscript and
+        // leaves mustache/handlebars embedded templates in html mode
+        var mixedMode = {
+          name: "htmlmixed",
+          scriptTypes: [{matches: /\/x-handlebars-template|\/x-mustache/i,
+                         mode: null},
+                        {matches: /(text|application)\/(x-)?vb(a|script)/i,
+                         mode: "vbscript"}]
+        };
+        var editor = CodeMirror.fromTextArea(document.getElementById("textarea"), {
+          mode: mixedMode,
+          selectionPointer: true
+        });
+      </script>
+
+    <script src="render/ipcRender.js"></script>
 </html>

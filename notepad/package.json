@@ -47,6 +47,7 @@
     }
   },
   "dependencies": {
+    "codemirror": "^5.42.2",
     "electron-compile": "^6.4.4",
     "electron-squirrel-startup": "^1.0.0"
   },
