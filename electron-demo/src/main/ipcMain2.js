@@ -23,9 +23,9 @@ ipcMain.on('openwindow', (e, userInfo)=> {
 
     // 把渲染进程传递过来的数据再次传递给渲染进程news
     // 等待窗口加载完
-    win.webContents.on('did-finish-load', ()=>[
+    win.webContents.on('did-finish-load', ()=>{
         win.webContents.send('toNews', userInfo, winId)
-    ])
+    })
     
 
     win.on('closed', () => {
