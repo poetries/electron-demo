@@ -39,7 +39,7 @@ let template = [
                 accelerator: 'command+p', // 绑定快捷键
                 click: function(){
                     // 打印功能
-                    BrowserWindow.getFocusedWindow().webContents.print();
+                    BrowserWindow.getFocusedWindow().webContents.print({silent: true})
                 }
             },
             {
