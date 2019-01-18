@@ -5,18 +5,26 @@
     <title></title>
   </head>
   <body>
-    Well hey there!!!
+    <h1>Hello Electron</h1>
     <button id="btn">打开新窗口</button><br />
     <button id="send">在 渲染进程中执行主进程里的方法（异步）</button><br />
     <button id="sendFeedback">在 渲染进程中执行主进程里的方法，并反馈给主进程（异步）</button><br />
     <button id="sendSync">渲染进程和主进程同步通信</button><br />
     <button id="openWindow">打开新窗口通信</button><br />
     <button id="shellDom">通过shell打开外部链接</button><br />
+    <button id="showError">showError</button><br />
+    <button id="showMsg">showMsg</button><br />
+    <button id="showOpenDialog">showOpenDialog</button><br />
+    <button id="saveDialog">saveDialog</button><br />
     
+    <webview id="myWebview" src="http://blog.poetries.top" style="position:fixed; width:100%; height:100%">
+    </webview>
   </body>
   <script src="render/browserWindow.js"></script>
   <script src="render/menu.js"></script>
   <script src="render/ipcRender.js"></script>
   <script src="render/openWindow.js"></script>
   <script src="render/shell.js"></script>
+  <script src="render/webview.js"></script>
+  <script src="render/dialog.js"></script>
 </html>

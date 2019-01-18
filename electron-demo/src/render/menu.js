@@ -1,7 +1,7 @@
 /* eslint-disable */
 // 在渲染进程中通过remote模块调用主进程中的模块
 const { Menu }  = require('electron').remote
-const { remote } = require('electron')
+var { remote } = require('electron')
 
 // 文档 https://electronjs.org/docs/api/menu-item
 // 菜单项目
