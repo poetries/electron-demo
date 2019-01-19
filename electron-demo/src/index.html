@@ -17,8 +17,18 @@
     <button id="showOpenDialog">showOpenDialog</button><br />
     <button id="saveDialog">saveDialog</button><br />
     <button id="showNotification">弹出消息通知</button><br />
+    <div>
+      <h2>双击下面信息复制</h2>
+      <p id='msg'>123456789</p>
+      <button id="plat">粘贴</button><br />
+      <input id="text" type="text"/>
+    </div>.
+    <div>
+      <h2>复制图片到界面</h2>
+      <button id="copyImg">复制图片</button><br />
+    </div>
     
-    <webview id="myWebview" src="https://github.com/poetries" style="position:fixed; width:100%; height:100%">
+    <webview id="myWebview" src="" style="position:fixed; width:100%; height:100%">
     </webview>
   </body>
   <script src="render/browserWindow.js"></script>
@@ -29,5 +39,6 @@
   <script src="render/webview.js"></script>
   <script src="render/dialog.js"></script>
   <script src="render/notification.js"></script>
+  <script src="render/clipboard.js"></script>
   
 </html>
