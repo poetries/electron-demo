@@ -1,5 +1,5 @@
 /* eslint-disable */
-const path = require('path');
+var path = require('path');
 let btn = document.querySelector('#btn');
 const BrowerWindow = require('electron').remote.BrowserWindow;
 let win = null;
