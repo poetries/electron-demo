@@ -8,6 +8,9 @@
      <el-button type="primary">
         <router-link to="/news">新闻</router-link>
       </el-button>
+      <el-button type="primary">
+        <router-link to="/nedb">nedb的使用</router-link>
+      </el-button>
       
     </div>
     <router-view></router-view>
