@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <myHeader></myHeader>
     <div class="header">
       <el-button type="primary">
          <router-link to="/">首页</router-link>
@@ -14,8 +15,12 @@
 </template>
 
 <script>
+  import MyHeader from './components/MyHeader.vue'; 
   export default {
-    name: 'electron-vue-demo'
+    name: 'electron-vue-demo',
+    components:{
+      MyHeader:MyHeader
+    }
   }
 </script>
 
