@@ -1,9 +1,6 @@
 <template>
-  <div id="wrapper">
+  <div id="news">
     news page
-    <div>
-         <router-link to="/">返回首页</router-link>
-    </div>
   </div>
 </template>
 
