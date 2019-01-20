@@ -1,4 +1,4 @@
-var {ipcMain,BrowserWindow} =require('electron');
+import {ipcMain, BrowserWindow} from 'electron'
 
 ipcMain.on('toMain', (e, data)=>{
     console.log(data)
